@@ -138,16 +138,6 @@ Compose setup:
 - Restart policy: `always`
 - Host volume mount: `/home` -> `/anvilfolder`
 
-This means host files under `/home/...` are visible inside the container under
-`/anvilfolder/...`.
-
-Important path note (AWS username differences):
-- Your backend code currently expects model files under:
-  `/anvilfolder/ubuntu/main/...`
-- If your Lightsail instance uses a different home directory (for example
-  `/home/bitnami/...`), update the paths in `connect4_backend.py` accordingly.
-
-
 Deployment Steps (Typical)
 --------------------------
 1. Copy these files to your Lightsail instance project folder:
